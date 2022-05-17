@@ -14,9 +14,12 @@ export default function Home() {
     // check if user is already logged in
     // clear the local storage
     
-    if (localStorage.getItem('token')) {
-      setMessage('You are already logged in')
-      localStorage.removeItem('token')
+    // if (localStorage.getItem('token')) {
+    //   setMessage('You are already logged in')
+    //   return
+    // }
+    if(!email || !password){
+      setMessage('Please enter your email and password')
       return
     }
     e.preventDefault()
@@ -33,11 +36,8 @@ export default function Home() {
     if(token){
       const json = jwt.decode(token)
       localStorage.setItem('token', token)
-      if(json.admin){
-        setMessage('You are logged in as admin')
-      } else {
-        setMessage('You are logged in as user')
-      }
+      setMessage(`You are logged in as ${json.email}`)
+      alert(`This is your access token: ${token}`)
     }
     else{
       setMessage('Wrong credentials')
