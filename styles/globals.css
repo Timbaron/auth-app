@@ -4,6 +4,10 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    /* background image */
+  background-color: #333;
+  /* background-repeat: no-repeat;
+  background-size: cover; */
 }
 
 a {
@@ -13,4 +17,53 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin: 10px;
+  width: 20%;
+}
+input {
+  width: 90%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  /* padding: 5px; */
+  /* margin: 5px; */
+  margin-bottom: 10px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+input:focus {
+  border-left: 3px solid black;
+}
+
+input:hover {
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+button {
+  background-color: transparent; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px;
+  transition: width 2s;
+  width: 100px
+}
+
+button:hover {
+  background-color: green;
+  color: white;
+  width: 300px;
+  cursor: pointer;
 }
